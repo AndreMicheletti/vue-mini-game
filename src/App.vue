@@ -114,8 +114,10 @@ export default {
       this.logs = []
     },
     checkStatus: function() {
-      var container = this.$el.querySelector("#logs");
-      container.scrollTop = container.scrollHeight;
+      setTimeout(() => {
+        var container = this.$el.querySelector("#logs");
+        container.scrollTop = container.scrollHeight;
+      }, 5)
       if (this.player <= 0) {
         alert('Foe won!');
         this.reset();
